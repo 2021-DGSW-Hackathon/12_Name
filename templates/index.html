@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load sass_tags %}
+    <link href="{% sass_src 'css/sensor.scss' %}" rel="stylesheet" type="text/css" />
+    <link href="{% sass_src 'css/navbar.scss' %}" rel="stylesheet" type="text/css" />
+    <link href="{% sass_src 'css/style.scss' %}" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+</head>
+<body>
+    <ul class="nav-container">
+        <li class="nav-item"> <a href="">Auto Mode</a> </li>
+        <li class="nav-item"> <a href="">Semi Mode</a> </li>
+    </ul>
+
+    <div class="all-sensor">
+
+        <a href="control_temp/" class="sensor-value">
+            <div class="sensor_value">온도: {{ temperature }}℃</div>
+        </a>
+        
+        <a href="control_humidity/" class="sensor-value">
+            <div class="sensor_value">습도: {{ humidity }}%</div>
+        </a>
+        
+        <a href="control_led/" class="sensor-value">
+            <div class="sensor_value">전등 상태 확인하러 가기</div>
+        </a>
+
+        <a href="" class="sensor-value">
+            <div class="sensor_value">가스 상태 확인하러 가기</div>
+        </a>
+
+        <a href="" class="sensor-value">
+            <div class="sensor_value">미세 먼지 상태 확인하러 가기</div>
+        </a>
+    </div>
+</body>
+</html>
